@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo desafio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="b1">
+    <header>
+        <divc lass="titulo"><h1>Calculos para ebike.</h1></div>
+    </header>
+
+    <div class="Contenedor">
+        <div class="Caja">
+            <div class="Caja2">
+                <h2>Calculo de velocidad maxima.</h2>
+                <p>Para saber la velocidad de cualquier vehiculo con ruedas es necesario concer el radio de sus llantas, y las rpm maximas a las que estas pueden girar, este dato lo podemos conseguir en las especificaciones del motor, en caso de que el motor este conectado a la rueda a travez de alguna transmision, es necesario conoocer la relacion de vueltas entre el motor y la rueda ya que lo que nos interesa es la vueltas por minuto de la rueda. Con ese dato solo se necesita multiplicar por el perimetro de la ruda en kilometros, y las RPH para conseguir la velocidad maxima teorica del vechiculo. </p>
+
+                <form name="form" id="VelocidadM" class="Formulario">
+                    <div class="FormualrioIN">
+                        Radio en metros: &nbsp; 
+                        <input type="text" id="Radio">
+                    </div>
+
+                    <div class="FormualrioIN">
+                        Revoluciones Por Minuto: &nbsp;
+                        <input type="text" id="RPM">
+                    </div>
+                    <input type = "button" onclick = "valor()" value = "Calcular" />
+                </form>
+                <div class="Resultados">
+                    <p>La velocidad maxima es: </p>
+                    <p id="RVelocidad" class="Resultado"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="Caja">
+            <div class="Caja2">
+                <h2>Calculo de Autonomia maxima.</h2>
+                <p>Para calcular la autonomia maxima del vehiculo electrico, es necesario conocer la maxima capacidad en Amperes Hora de nuestra bateria junto con el consumo promedio nominal de corriente de nuestro motor, este se consigue dividiendo la potencia en watts de nuestro motor entre el voltaje que se aplica a nuestro motor, y este resultado entre dos, lo que puede significar ir a la mitad de la velocidad maxima de nuestro vehiculo.</p>
+            
+
+            <form name="form" id="AutonomiaM" class="Formulario2">
+                <div class="FormualrioIN">
+                    Capacidad Bateria en Amperes hora: &nbsp; 
+                    <input type="text" id="Capacidad">
+                </div>
+
+                <div class="FormualrioIN">
+                    Voltaje del Motor: &nbsp;
+                    <input type="text" id="volts">
+                </div>
+
+                <div class="FormualrioIN">
+                    Potencia de motor en Watts: &nbsp;
+                    <input type="text" id="watts">
+                </div>
+                <input type="button" onclick = "valor2()" value="Calcular">
+            </form>
+            <div class="Resultados">
+                <p>La autonomia maxima es: </p>
+                <p id="RAutonomia" class="Resultado"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Experentos en soluciones para EV's.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
